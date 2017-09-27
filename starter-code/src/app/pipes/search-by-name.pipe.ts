@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchByNamePipe implements PipeTransform {
 
   transform(arrayOfFoods: any[], inputValue: string): any[] {
-    if(arrayOfFoods){
+    if(!arrayOfFoods){
       return [];
     }
 
