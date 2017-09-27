@@ -1,5 +1,22 @@
-<h2> Food List </h2>
+<h2> Search For Foods </h2>
 
+
+<input type="search" placeholder="pizza" [(ngModel)]="mySearchTerm"/>
+
+
+<div class="food-search">
+  <ul>
+    <li *ngFor="let oneFood of (foods | searchByName:mySearchTerm)">
+      <h3>Name: {{oneFood.name}}</h3>
+      <p>Calories: {{oneFood.calories}}</p>
+      <img [src] = "oneFood.image" />
+    </li>
+  </ul>
+</div>
+
+
+
+<h2> Food List </h2>
 
 
 <div>
